@@ -1,0 +1,37 @@
+programa
+/*
+ * Faça um programa para calcular despesas com abastecimento veicular
+ * O usuário deverá informar a distância que irá percorrer
+ * O programa deverá calcular a quantidade de combustível que será necessário para percorrer a distância.
+ * O progrma deverá calcular o valor total em Reais que serão necessários para abastecer o veículo.
+ */
+{
+	inclua biblioteca Matematica
+ --> mat // importar biblioteca com funções matemáticas que poderão se utilizadas no programa
+	
+	funcao inicio()
+	{
+	
+		//Declaração das variáveis que serão utilizadas no programa
+		inteiro distancia
+		real consumoCombustivel
+		real gastoCombustivel
+		real autonomia = 9.5 // Quantos KM o veículo pecorre com 1 litro de combustível.
+		real valorLitroCombustivel = 4.89 // Valor pago por litro de combustível.
+		
+		escreva("-------------------------------\n")
+		escreva("Informe a distância que será percorrida:\t")
+		leia(distancia)
+		escreva("-------------------------------\n")
+		
+		consumoCombustivel = distancia / autonomia // Calcula a quantidade de combustível que o veículo precisa para percorrer a distância informada
+		gastoCombustivel = consumoCombustivel * valorLitroCombustivel // Calcula o valor em R$ necessário para o abastecimento
+
+		escreva("\n")
+		escreva("Distância a percorrer: \t", distancia, " KM\n")
+		escreva("Para percorrer os \t", distancia, " KM, serão necessários \t", mat.arredondar(consumoCombustivel,2), " litros de combustível\n")
+		escreva("Para percorrer os \t", distancia, " KM, será gasto \t \tR$ ", mat.arredondar(gastoCombustivel,2), " em combustível\n")
+		escreva("-------------------------------\n")
+		escreva("OBRIGADO POR UTILIZAR NOSSO PROGRAMA, TENHA FASSA UMA ÓTIMA VIAJEM!\n")
+	}
+}
