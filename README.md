@@ -1,1 +1,1 @@
-# portugol
+# Repositório para projetos no Portugol
